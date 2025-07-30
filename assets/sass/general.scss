@@ -1,6 +1,6 @@
 @import "color";
 @import "mixins";
-@import url('https://fonts.googleapis.com/css2?family=Outfit:wght@400;500;600;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600;700&display=swap');
 @import url('https://db.onlinewebfonts.com/c/aba1a083bf50980a05f0265179103a09?family=DIN+Next+LT+Arabic+Medium');
 /*-----------------------
    fontFamily
@@ -184,7 +184,7 @@ input {
     font-family: 'Outfit', sans-serif;
     -webkit-transition: all 0.4s ease-out;
     transition: all 0.4s ease-out;
-    padding-inline: rem(8);
+    padding-inline: rem(24);
 
     &:hover {
         border: 1px solid var(--primary);
@@ -208,14 +208,16 @@ input {
 
 .btn-primary {
     font-size: 1rem;
-    border-radius: rem(8);
+    border-radius: rem(100);
     width: max-content;
-    min-width: rem(174);
+    min-width: rem(149);
     min-height: rem(45);
+    padding-inline: rem(24);
     transition: 0.5s;
+    color: #FBFCFE;
     background-size: 200% auto;
-    background-image: linear-gradient(to right, #4D98E2 20%, #3971A7 80%);
-    font-weight: 500;
+   // background-image: linear-gradient(to right, #4D98E2 20%, #3971A7 80%);
+   background: var(--primary);
     font-family: 'Outfit', sans-serif;
 
     img {
@@ -491,7 +493,7 @@ header {
 
         @media (min-width: 992px) {
             font-size: rem(24);
-            padding-inline: 12%;
+            padding-inline: 19%;
         }
 
         @media (max-width: 991.98px) {
@@ -1361,7 +1363,48 @@ header {
         }
     }
 }
+/*-----------------------
+    plateform
+-------------------------*/
+.agent__section{
+    padding-block: rem(60);
+    &.with__bg{
+        background: var(--white-blue-Pair);
+    }
+    &--image{
+        height: rem(380);
+        img{
+            border-radius: rem(20);
+            object-fit: cover;
+        }
+    }
+    &--text{
+        row-gap: rem(30);
+        h3{
+            font-weight: 400;
+            color: var(--dark-color);
+            font-family: 'Outfit', sans-serif;
+            @media (min-width: 768px) {
+                font-size: rem(48);
+            }
 
+            @media (max-width: 767.98px) {
+                font-size: rem(28);
+            }
+        }
+        p{
+            @media (min-width: 768px) {
+                font-size: rem(20);
+            }
+            color:var(--gray-pair);
+            font-weight: 300;
+            font-family: 'Outfit', sans-serif;
+        }
+    }
+}
+.padding-section{
+    padding-block: rem(100);
+}
 /*-----------------------
     footer
 -------------------------*/

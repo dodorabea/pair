@@ -1,4 +1,4 @@
-@import url("https://fonts.googleapis.com/css2?family=Outfit:wght@400;500;600;700&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600;700&display=swap");
 @import url("https://db.onlinewebfonts.com/c/aba1a083bf50980a05f0265179103a09?family=DIN+Next+LT+Arabic+Medium");
 :root {
   --primary:#4D98E2;
@@ -219,7 +219,7 @@ input {
   color: var(--primary);
   font-family: "Outfit", sans-serif;
   transition: all 0.4s ease-out;
-  padding-inline: 0.5rem;
+  padding-inline: 1.5rem;
 }
 .read__more:hover {
   border: 1px solid var(--primary);
@@ -243,15 +243,16 @@ html[dir=rtl] .read__more img {
 
 .btn-primary {
   font-size: 1rem;
-  border-radius: 0.5rem;
+  border-radius: 6.25rem;
   width: -moz-max-content;
   width: max-content;
-  min-width: 10.875rem;
+  min-width: 9.3125rem;
   min-height: 2.8125rem;
+  padding-inline: 1.5rem;
   transition: 0.5s;
+  color: #FBFCFE;
   background-size: 200% auto;
-  background-image: linear-gradient(to right, #4D98E2 20%, #3971A7 80%);
-  font-weight: 500;
+  background: var(--primary);
   font-family: "Outfit", sans-serif;
 }
 .btn-primary img {
@@ -494,7 +495,7 @@ header .navbar-collapse .navbar-nav {
 @media (min-width: 992px) {
   .home__hero__section--subtitle {
     font-size: 1.5rem;
-    padding-inline: 12%;
+    padding-inline: 19%;
   }
 }
 @media (max-width: 991.98px) {
@@ -1303,6 +1304,56 @@ html[dir=ltr] .all__customers__card .rate__section {
   .our__customers__section--desc h3 {
     font-size: 1.75rem;
   }
+}
+
+/*-----------------------
+    plateform
+-------------------------*/
+.agent__section {
+  padding-block: 3.75rem;
+}
+.agent__section.with__bg {
+  background: var(--white-blue-Pair);
+}
+.agent__section--image {
+  height: 23.75rem;
+}
+.agent__section--image img {
+  border-radius: 1.25rem;
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+.agent__section--text {
+  row-gap: 1.875rem;
+}
+.agent__section--text h3 {
+  font-weight: 400;
+  color: var(--dark-color);
+  font-family: "Outfit", sans-serif;
+}
+@media (min-width: 768px) {
+  .agent__section--text h3 {
+    font-size: 3rem;
+  }
+}
+@media (max-width: 767.98px) {
+  .agent__section--text h3 {
+    font-size: 1.75rem;
+  }
+}
+.agent__section--text p {
+  color: var(--gray-pair);
+  font-weight: 300;
+  font-family: "Outfit", sans-serif;
+}
+@media (min-width: 768px) {
+  .agent__section--text p {
+    font-size: 1.25rem;
+  }
+}
+
+.padding-section {
+  padding-block: 6.25rem;
 }
 
 /*-----------------------
