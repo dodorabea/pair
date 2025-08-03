@@ -214,11 +214,12 @@ input {
   width: -moz-max-content;
   width: max-content;
   min-width: 6.25rem;
-  min-height: 2.8125rem;
+  min-height: 3rem;
   border: 1px solid var(--primary);
   color: var(--primary);
+  font-weight: 400;
   font-family: "Outfit", sans-serif;
-  transition: all 0.4s ease-out;
+  transition: all 0.2s ease-out;
   padding-inline: 1.5rem;
 }
 .read__more:hover {
@@ -462,8 +463,24 @@ header .navbar-collapse .navbar-nav {
   }
 }
 
+.clients__logos .swiper-slide {
+  height: 75px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
 .slider-box {
-  min-height: 70px;
+  min-height: 50px;
+}
+.slider-box img {
+  filter: brightness(0) opacity(0.3);
+  transition-property: filter;
+  transition-timing-function: var(--tw-ease, cubic-bezier(0.4, 0, 0.2, 1));
+  transition-duration: var(--tw-duration, 0.25s);
+}
+.slider-box:hover img {
+  filter: unset;
 }
 
 .home__hero__section {
@@ -489,7 +506,7 @@ header .navbar-collapse .navbar-nav {
 }
 .home__hero__section--subtitle {
   color: var(--mid-gray);
-  font-weight: 400;
+  font-weight: 300;
   font-family: "Outfit", sans-serif;
 }
 @media (min-width: 992px) {
@@ -667,7 +684,8 @@ header .navbar-collapse .navbar-nav {
 }
 .benefits__section--subtitle {
   color: var(--mid-gray);
-  font-family: "Montserrat-Medium", sans-serif;
+  font-family: "Outfit", sans-serif;
+  font-weight: 400;
 }
 @media (min-width: 992px) {
   .benefits__section--subtitle {
@@ -962,9 +980,12 @@ html[dir=ltr] .all__customers__card .rate__section {
   left: 16px;
 }
 .all__customers__card .rate__section .title {
+  font-size: 0.875rem;
+  font-weight: 300;
   font-family: "Outfit", sans-serif;
 }
 .all__customers__card .rate__section .value {
+  font-size: 1.25rem;
   font-weight: 500;
   font-family: "Outfit", sans-serif;
 }
@@ -1040,11 +1061,13 @@ html[dir=ltr] .all__customers__card .rate__section {
   margin-bottom: 1rem;
 }
 .service__details__text .item h4 {
+  font-weight: 400;
   color: var(--dark-color);
   font-size: 1.125rem;
   font-family: "Outfit", sans-serif;
 }
 .service__details__text .item p {
+  font-weight: 400;
   color: var(--mid-gray);
   font-family: "Outfit", sans-serif;
 }
@@ -1103,7 +1126,7 @@ html[dir=ltr] .all__customers__card .rate__section {
   }
 }
 .our__products__image {
-  border-radius: 0.75rem;
+  border-radius: 1.3125rem;
 }
 .our__products__image img {
   -o-object-fit: cover;
@@ -1131,7 +1154,7 @@ html[dir=ltr] .all__customers__card .rate__section {
     full__story
 -------------------------*/
 .full__story__content {
-  background: var(--primary-50);
+  background: #F8F9FA;
   border-radius: 1.25rem;
 }
 @media (min-width: 768px) {
@@ -1142,6 +1165,11 @@ html[dir=ltr] .all__customers__card .rate__section {
 @media (max-width: 767.98px) {
   .full__story__content {
     padding: 1.5rem 1rem;
+  }
+}
+@media (min-width: 992px) {
+  .full__story--content {
+    padding-inline-start: 3.125rem;
   }
 }
 .full__story--content p {
@@ -1235,6 +1263,7 @@ html[dir=ltr] .all__customers__card .rate__section {
   font-size: 1.25rem;
   color: var(--dark-color);
   background: transparent;
+  font-weight: 400;
   font-family: "Outfit", sans-serif;
 }
 .pair__security__text .accordion-item .accordion-button.collapsed {
@@ -1245,6 +1274,7 @@ html[dir=ltr] .all__customers__card .rate__section {
   padding: 1.5rem 0 0 0;
 }
 .pair__security__text .accordion-item .accordion-body p {
+  font-weight: 400;
   color: var(--mid-gray);
   font-family: "Outfit", sans-serif;
 }
@@ -1357,12 +1387,54 @@ html[dir=ltr] .all__customers__card .rate__section {
 }
 
 /*-----------------------
+    Contact
+-------------------------*/
+.contact__section {
+  padding-block: 5rem;
+}
+.contact__section__text h3 {
+  color: var(--dark-color);
+  font-family: "Montserrat-SemiBold", sans-serif;
+}
+@media (min-width: 768px) {
+  .contact__section__text h3 {
+    font-size: 2rem;
+  }
+}
+@media (max-width: 767.98px) {
+  .contact__section__text h3 {
+    font-size: 1.5rem;
+  }
+}
+.contact__section__text p {
+  font-weight: 300;
+  color: var(--mid-gray);
+  font-family: "Outfit", sans-serif;
+}
+@media (min-width: 768px) {
+  .contact__section__text p {
+    font-size: 1.125rem;
+  }
+}
+@media (max-width: 767.98px) {
+  .contact__section__text p {
+    font-size: 1rem;
+  }
+}
+.contact__section__form {
+  padding: 1.5rem;
+  border-radius: 12px;
+  border: 1px solid #F4F3FD;
+  background: #FFF;
+  box-shadow: 0 6px 25px 1px rgba(0, 0, 0, 0.08);
+}
+
+/*-----------------------
     footer
 -------------------------*/
 .footer {
   padding-bottom: 40px;
-  border-top: 1px solid #EBEEE7;
-  background: #F5F5F5;
+  background: #F8F9FA;
 }
 .footer__top {
   padding-block: 40px;
@@ -1386,16 +1458,29 @@ html[dir=ltr] .all__customers__card .rate__section {
 .footer__bottom {
   border-radius: 0.75rem;
   padding-block: 1rem;
-  padding-inline: 2.5rem;
 }
 @media (min-width: 768px) {
   .footer__bottom {
-    justify-content: space-between;
+    padding-inline: 2.5rem;
   }
 }
 @media (max-width: 767.98px) {
   .footer__bottom {
+    padding-inline: 0rem;
+  }
+}
+@media (max-width: 499.98px) {
+  .footer__bottom {
     row-gap: 1rem;
+  }
+}
+@media (min-width: 400px) {
+  .footer__bottom {
+    justify-content: space-between;
+  }
+}
+@media (max-width: 349.98px) {
+  .footer__bottom {
     justify-content: center;
   }
 }
