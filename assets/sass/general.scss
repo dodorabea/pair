@@ -217,8 +217,8 @@ input {
     transition: 0.5s;
     color: #FBFCFE;
     background-size: 200% auto;
-   // background-image: linear-gradient(to right, #4D98E2 20%, #3971A7 80%);
-   background: var(--primary);
+    // background-image: linear-gradient(to right, #4D98E2 20%, #3971A7 80%);
+    background: var(--primary);
     font-family: 'Outfit', sans-serif;
 
     img {
@@ -241,9 +241,11 @@ input {
 -------------------------*/
 header {
     padding-block: rem(14);
-    @media (min-width: 992px){
+
+    @media (min-width: 992px) {
         padding-inline: rem(16);
     }
+
     .navbar-brand {
         padding-inline-end: rem(50);
     }
@@ -252,11 +254,12 @@ header {
         border-radius: rem(16);
         padding-block: rem(0);
         padding-inline: rem(24);
-        
-        @media (min-width: 992px){
+
+        @media (min-width: 992px) {
             gap: 2rem;
         }
-        @media (max-width: 991.98px){
+
+        @media (max-width: 991.98px) {
             gap: 1rem;
         }
 
@@ -461,22 +464,40 @@ header {
         font-family: $font-family-medium;
     }
 }
-.clients__logos .swiper-slide{
+
+.clients__logos .swiper-slide {
     height: 75px;
-     display: flex;
-     align-items: center;
-     justify-content: center;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+  
+}
+.mySwiper.logos::before {
+    left: 0;
+    background: linear-gradient(to right, #fff 0%, transparent 100%);
+}
+.mySwiper.logos::before, .mySwiper.logos::after {
+    content: "";
+    position: absolute;
+    top: 0;
+    width: 60px;
+    height: 100%;
+    z-index: 10;
+    pointer-events: none;
 }
 .slider-box {
     min-height: 50px;
-    img{
-       filter: brightness(0) opacity(.3); 
+
+    img {
+        filter: brightness(0) opacity(.3);
         transition-property: filter;
-        transition-timing-function: var(--tw-ease, cubic-bezier(.4,0,.2,1));
+        transition-timing-function: var(--tw-ease, cubic-bezier(.4, 0, .2, 1));
         transition-duration: var(--tw-duration, .25s);
     }
-    &:hover{
-        img{
+
+    &:hover {
+        img {
             filter: unset;
         }
     }
@@ -957,6 +978,7 @@ header {
     }
 
     &__card {
+       
         &.with__overlay {
             .image-part {
                 &::after {
@@ -973,9 +995,17 @@ header {
         .image-part {
             height: rem(380);
             border-radius: rem(12);
-
+            transition: transform 0.4s ease;
+            &:hover{
+                img{
+ transform: scale(1.08); 
+                }
+              
+            }
             img {
                 border-radius: rem(12);
+                transition: transform 0.4s ease;
+                -o-object-fit: cover;
                 object-fit: cover;
             }
 
@@ -1132,7 +1162,7 @@ header {
 .our__products {
     padding-block: rem(80);
 
-   
+
 
     .m-title {
         margin-bottom: rem(56);
@@ -1207,9 +1237,10 @@ header {
     }
 
     &--content {
-        @media (min-width: 992px){
+        @media (min-width: 992px) {
             padding-inline-start: rem(50);
         }
+
         p {
             font-size: 1rem;
             color: var(--gray-pair);
@@ -1391,27 +1422,34 @@ header {
         }
     }
 }
+
 /*-----------------------
     plateform
 -------------------------*/
-.agent__section{
+.agent__section {
     padding-block: rem(60);
-    &.with__bg{
+
+    &.with__bg {
         background: var(--white-blue-Pair);
     }
-    &--image{
+
+    &--image {
         height: rem(380);
-        img{
+
+        img {
             border-radius: rem(20);
             object-fit: cover;
         }
     }
-    &--text{
+
+    &--text {
         row-gap: rem(30);
-        h3{
+
+        h3 {
             font-weight: 400;
             color: var(--dark-color);
             font-family: 'Outfit', sans-serif;
+
             @media (min-width: 768px) {
                 font-size: rem(48);
             }
@@ -1420,48 +1458,61 @@ header {
                 font-size: rem(28);
             }
         }
-        p{
+
+        p {
             @media (min-width: 768px) {
                 font-size: rem(20);
             }
+
             color:var(--gray-pair);
             font-weight: 300;
-            font-family: 'Outfit', sans-serif;
+            font-family: 'Outfit',
+            sans-serif;
         }
     }
 }
-.padding-section{
+
+.padding-section {
     padding-block: rem(100);
 }
+
 /*-----------------------
     Contact
 -------------------------*/
-.contact__section{
+.contact__section {
     padding-block: rem(80);
-    &__text{
-        h3{
+
+    &__text {
+        h3 {
             color: var(--dark-color);
             font-family: $font-family-SemiBold;
-            @media (min-width: 768px){
+
+            @media (min-width: 768px) {
                 font-size: rem(32);
             }
-            @media (max-width: 767.98px){
+
+            @media (max-width: 767.98px) {
                 font-size: rem(24);
             }
         }
-        p{
-            @media (min-width: 768px){
+
+        p {
+            @media (min-width: 768px) {
                 font-size: rem(18);
             }
-            @media (max-width: 767.98px){
+
+            @media (max-width: 767.98px) {
                 font-size: rem(16);
             }
+
             font-weight: 300;
             color: var(--mid-gray);
-            font-family: 'Outfit', sans-serif;
+            font-family: 'Outfit',
+            sans-serif;
         }
     }
-    &__form{
+
+    &__form {
         padding: rem(24);
         border-radius: 12px;
         border: 1px solid #F4F3FD;
@@ -1469,6 +1520,7 @@ header {
         box-shadow: 0 6px 25px 1px rgba(0, 0, 0, 0.08);
     }
 }
+
 /*-----------------------
     footer
 -------------------------*/
@@ -1506,22 +1558,25 @@ header {
     &__bottom {
         border-radius: rem(12);
         padding-block: rem(16);
-        
+
 
         @media (min-width: 768px) {
             padding-inline: rem(40);
         }
-        @media (max-width: 767.98px){
+
+        @media (max-width: 767.98px) {
             padding-inline: rem(0);
         }
 
         @media (max-width: 499.98px) {
             row-gap: 1rem;
         }
-        @media (min-width: 400px){
-           justify-content: space-between;
+
+        @media (min-width: 400px) {
+            justify-content: space-between;
         }
-        @media (max-width: 349.98px){
+
+        @media (max-width: 349.98px) {
             justify-content: center;
         }
 

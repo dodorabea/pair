@@ -468,6 +468,22 @@ header .navbar-collapse .navbar-nav {
   display: flex;
   align-items: center;
   justify-content: center;
+  position: relative;
+}
+
+.mySwiper.logos::before {
+  left: 0;
+  background: linear-gradient(to right, #fff 0%, transparent 100%);
+}
+
+.mySwiper.logos::before, .mySwiper.logos::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  width: 60px;
+  height: 100%;
+  z-index: 10;
+  pointer-events: none;
 }
 
 .slider-box {
@@ -939,11 +955,16 @@ html[dir=ltr] .all__customers__card.with__overlay .image-part::after {
 .all__customers__card .image-part {
   height: 23.75rem;
   border-radius: 0.75rem;
+  transition: transform 0.4s ease;
+}
+.all__customers__card .image-part:hover img {
+  transform: scale(1.08);
 }
 .all__customers__card .image-part img {
   border-radius: 0.75rem;
+  transition: transform 0.4s ease;
   -o-object-fit: cover;
-     object-fit: cover;
+  object-fit: cover;
 }
 .all__customers__card .image-part .Logo__image {
   position: absolute;
