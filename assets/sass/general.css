@@ -472,8 +472,13 @@ header .navbar-collapse .navbar-nav {
 }
 
 .mySwiper.logos::before {
-  left: 0;
+  inset-inline-start: 0;
   background: linear-gradient(to right, #fff 0%, transparent 100%);
+}
+
+.mySwiper.logos::after {
+  inset-inline-end: 0;
+  background: linear-gradient(to left, #fff 0%, transparent 100%);
 }
 
 .mySwiper.logos::before, .mySwiper.logos::after {
