@@ -179,6 +179,15 @@ input {
   outline: 0 !important;
 }
 
+@layer theme {
+  :host, :root {
+    --breakpoint-3xl: 108rem;
+  }
+}
+.container-fluid.max-w-\(--breakpoint-3xl\) {
+  max-width: var(--breakpoint-3xl);
+}
+
 /*-----------------------
     Global Styles
 -------------------------*/
@@ -1083,6 +1092,9 @@ html[dir=ltr] .all__customers__card .rate__section {
   font-size: 1.125rem;
   color: var(--mid-gray);
 }
+.service__details__text .item img {
+  margin-top: 2.5px;
+}
 .service__details__text .item:not(:last-child) {
   margin-bottom: 1rem;
 }
@@ -1209,6 +1221,7 @@ html[dir=ltr] .all__customers__card .rate__section {
   font-family: "Montserrat-SemiBold", sans-serif;
 }
 .full__story--content .name .job-title {
+  margin-top: 2px;
   font-size: 0.875rem;
   color: var(--mid-gray);
   font-family: "Montserrat-Medium", sans-serif;
